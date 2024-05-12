@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruben Peraita</title>
+    <link rel="stylesheet" href="assets/estilos/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/fontawesome-free-5.15.4-web/css/all.min.css">
+    <script src="assets/scripts/script.js"></script>
+</head>
+<!-- class="dark" -->
+<body onload="fInicio(), fMostrarFotosCarrusel()">
+    <div id="div_modal">
+        
+        <form id="form_login" >
+            <div id="cancelar" onclick="fCancelar()">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <table>
+                <tr>
+                    <td>User</td>
+                    <td><input type="text" id="alias"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="div_error">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="botonera">
+                            <div onclick="fControlLogin()">Login</div>
+                        </div>
+                    </td>
+                    <td class="botonera" colspan="2" onclick="fMostrar('form_registro')">
+                        Registro
+                    </td>
+                </tr>                
+            </table>
+        </form>
+        <form id="form_registro">
+            <div id="cancelar1" onclick="fCancelar()">
+                <i class="far fa-times-circle"></i>
+            </div>
+            <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" id="rnombre"></td>
+                </tr>
+                <tr>
+                    <td>Alias</td>
+                    <td><input type="text" id="ralias"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" id="rpassword"></td>
+                </tr>
+                <tr>
+                    <td>Repita password</td>
+                    <td><input type="password" id="rrpassword"></td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="rdiv_error">&nbsp;</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="botonera">
+                        <div onclick="fControlRegistrar()">Registrar</div>
+                    </td>
+                    <td class="botonera" colspan="2" onclick="fMostrar('form_login')">
+                        Login
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <form id="form_mensaje">
+            <div id="mensaje"></div>
+        </form>
+    </div>
+    <header>
+        <div id="div_foto">
+            <img src="assets/fotos/anonimo.png" alt="">
+        </div>
+        <div class="title">LAS MEJORES PALAS DE PADEL</div>
+        <div class="log_register">
+            <div class="login" onclick="fMostrar('form_login')"> 
+                LOGIN
+            </div> <div class="resgistrar" onclick="fMostrar('form_registro')"> 
+                REGISTRAR
+            </div>
+        </div>
+    </header>
+    
+
+    <nav>
+        
+    </nav>
+
+    <section>
+        <div id="carrusel">
+            <div id="tira">
+            </div>
+            <div id="izq" onclick="fMoverI()"><i class="fas fa-arrow-left"></i></div>
+            <div id="der" onclick="fMoverD()"><i class="fas fa-arrow-right"></i></div>
+        </div>
+
+        <div class="palas" >
+
+        </div>
+    </section>
+
+    <footer>
+        <div id="copy">
+            &copy; RPM - Febrero 2024
+        </div>
+        <div id="author">
+            Hecho por: Rubén Peraita Moreno
+        </div>
+        <div id="socials">
+            <i onclick="fModoOscuro()" id="modo_oscuro" class="fas fa-adjust"></i>
+            <a id="link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a id="link" href="https://es-es.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a id="link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
